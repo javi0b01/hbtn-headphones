@@ -13,8 +13,10 @@ Here the final result:
 
 ## Resources
 ### For this project, students are expected to look at this concept:
-- [Implement a design](https://intranet.hbtn.io/concepts/220)
+* [Implement a design](https://intranet.hbtn.io/concepts/220)
   - [Figma](https://www.figma.com/)
+* [SOURCE SANS PRO](https://www.fontsquirrel.com/fonts/source-sans-pro)
+* [SPIN CYCLE](https://www.fontsquirrel.com/fonts/Spin-Cycle-OT)
 
 ## Requirements
 - A `README.md` file.
