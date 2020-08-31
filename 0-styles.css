@@ -298,16 +298,6 @@ img {
     max-width: 960px;
   }
 }
-@media (max-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (max-width: 375px) {
-  .container {
-    max-width: 360px;
-  }
-}
 /* HEADER HERO
   ============================= */
 .navbar {
@@ -320,6 +310,10 @@ img {
 }
 .brand {
   width: 160px;
+}
+.menu-open,
+.menu-open-button {
+  display: none;
 }
 .menu-list {
   width: 300px;
@@ -369,15 +363,112 @@ img {
   font-family: var(--font-family-base-Regular);
   font-size: var(--font-size-small);
 }
+.hero-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 .hero-paragraph {
   font-family: var(--font-family-base-Light);
   font-size: var(--font-size-regular);
   line-height: var(--line-height-medium);
 }
 @media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+  .container {
+    max-width: 720px;
+  }
   .navbar {
     width: 600px;
   }
 }
 @media (max-width: 375px) {
+  html {
+    font-size: 57.5%;
+  }
+  .container {
+    max-width: 360px;
+  }
+  .navbar {
+    width: 100%;
+    margin-top: 8rem;
+    display: block;
+    position: relative;
+  }
+  .brand {
+    margin: 1rem auto;
+  }
+  .menu-line {
+    width: 2rem;
+    height: 2px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    position: absolute;
+    transition: all 0.1s ease-in-out;
+  }
+  .menu-line-1 {
+    transform: translate3d(0, -0.7rem, 0);
+  }
+  .menu-line-2 {
+    width: 1.2rem;
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-line-3 {
+    transform: translate3d(0, 0.7rem, 0);
+  }
+  .menu-list {
+    display: none;
+  }
+  .menu-open {
+    display: none;
+  }
+  .menu-open-button {
+    display: inline;
+    position: absolute;
+    top: 1.5rem;
+    left: 4rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .menu-open:checked + .menu-open-button .menu-line-1 {
+    transform: rotate(45deg) translate3d(0, 0, 0);
+  }
+  .menu-open:checked + .menu-open-button .menu-line-2 {
+    transform: scale(0) translate3d(0, 0, 0);
+  }
+  .menu-open:checked + .menu-open-button .menu-line-3 {
+    transform: rotate(-45deg) translate3d(0, 0, 0);
+  }
+  .menu-open:checked ~ .menu-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-open:checked ~ .menu-list .menu-item {
+    padding: 2rem 13rem;
+  }
+  .hero-image {
+    background-position: -360px;
+    background-position-y: 2rem;
+    transform: scale(1.2, 1.2);
+  }
+  .hero-content {
+    width: 100%;
+    margin-top: 24rem;
+  }
+  .hero-title {
+    letter-spacing: normal;
+    padding: 0 4rem;
+  }
+  .hero-subtitle {
+    padding: 0 6rem;
+  }
+  .hero-btn {
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+  .hero-paragraph {
+    padding: 0 4rem;
+  }
 }
