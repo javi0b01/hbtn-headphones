@@ -7,7 +7,6 @@
 */
 /* 0.  Reset / Normalize
   ============================= */
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
@@ -195,7 +194,7 @@ template {
   src: url(./fonts/SourceSansPro-LightIt.otf);
 }
 @font-face {
-  font-family: "SourceSansProRegular";
+  font-family: "SourceSansPro";
   src: url(./fonts/SourceSansPro-Regular.otf);
 }
 @font-face {
@@ -216,28 +215,28 @@ template {
 }
 /* VARIABLES */
 :root {
-  --font-family-title: "SourceSansProBlack";
-  --font-family-base: "SourceSansProRegular";
+  --font-family-base: "SourceSansPro", Verdana, Helvetica, sans-serif;
   --font-family-secondary: "SpinCycle";
-  --font-family-secondary3d: "SpinCycle3D";
-  --font-size-small: 1.2rem;
+  --font-style-secondary-3d: "SpinCycle3D";
+  --font-size-xx-small: 1rem;
+  --font-size-x-small: 1.2rem;
+  --font-size-small: 1.4rem;
   --font-size-base: 1.6rem;
   --font-size-large: 1.8rem;
-  --font-size-x-large: 2.3rem;
-  --font-size-xx-large: 4.8rem;
-  --font-style-base-BlackItalic: "SourceSansProBlackItalic";
-  --font-style-base-BoldItalic: "SourceSansProBoldItalic";
-  --font-style-base-ExtraLightItalic: "SourceSansProExtraLightItalic";
-  --font-style-base-Italic: "SourceSansProItalic";
-  --font-style-base-LightItalic: "SourceSansProLightItalic";
-  --font-style-base-SemiboldItalic: "SourceSansProSemiboldItalic";
+  --font-size-x-large: 2.4rem;
+  --font-size-xx-large: 3.2rem;
+  --font-weight-thin: 100;
+  --font-weight-extraLight: 200;
+  --font-weight-light: 300;
+  --font-weight-base: 400;
+  --font-weight-medium: 500;
+  --font-weight-semiBold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extraBold: 800;
+  --font-weight-black: 900;
   --line-height-small: 1.2;
   --line-height-base: 1.5;
   --line-height-big: 1.8;
-  --font-weight-base-Bold: "SourceSansProBold";
-  --font-weight-base-Semibold: "SourceSansProSemibold";
-  --font-weight-base-Light: "SourceSansProLight";
-  --font-weight-base-ExtraLight: "SourceSansProExtraLight";
   --color-primary: #ff6565;
   --color-white: #ffffff;
   --color-black: #000000;
@@ -253,22 +252,20 @@ template {
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
-  font-weight: ;
+}
+a {
+  color: var(--text-color-light);
 }
 a:link {
   text-decoration: none;
-  color: var(--text-color-light);
 }
-
 a:visited {
   font-style: italic;
 }
-
 a:hover {
   text-decoration: underline;
   color: var(--color-primary);
 }
-
 a:active {
   text-decoration: underline;
 }
@@ -285,55 +282,77 @@ img {
 .container {
   max-width: 1140px;
 }
-.title-light,
-.title-dark {
-  font-family: var(--font-family-base);
-}
-.title-light {
-  color: var(--text-color-light);
-}
-.title-dark {
-  color: var(--text-color-dark);
-}
 /* HEADER HERO
   ============================= */
 .navbar {
+  width: 1000px;
+  height: 32px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .brand {
-  width: 160px;
+  width: 161px;
 }
 .menu-list {
-  width: 320px;
+  width: 255px;
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .menu-item {
   font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-x-small);
+  font-weight: var(--font-weight-bold);
 }
 .hero-image {
+  width: 1400px;
   height: 800px;
   background-image: url(./images/headphones_hero_1.jpg);
   background-position: center;
   padding-top: 2rem;
-  /*
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  */
 }
 .hero-content {
   margin: 300px auto 0;
-  width: 640px;
-  height: 320px;
+  width: 637px;
+  height: 313px;
   color: var(--text-color-light);
   text-align: center;
   border: 1px solid yellow;
+}
+.hero-title {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-xx-large);
+  font-weight: var(--font-weight-base-Black);
+  letter-spacing: 0.1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.hero-subtitle {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base-Bold);
+  letter-spacing: 0.05rem;
+  margin-top: 0;
+}
+.hero-btn {
+  width: 162px;
+  height: 44px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  background-color: var(--color-primary);
+  color: var(--text-color-light);
+  border-radius: 44px;
+  border: none;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  font-weight: var(--we);
+}
+.hero-paragraph {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-base-ExtraLight);
 }
 /*
 @media (min-width: 768px) {
@@ -346,4 +365,15 @@ img {
     max-width: 960px;
   }
 }
-*/
+  --font-style-base-BlackItalic: "SourceSansProBlackItalic";
+  --font-style-base-BoldItalic: "SourceSansProBoldItalic";
+  --font-style-base-ExtraLightItalic: "SourceSansProExtraLightItalic";
+  --font-style-base-Italic: "SourceSansProItalic";
+  --font-style-base-LightItalic: "SourceSansProLightItalic";
+  --font-style-base-SemiboldItalic: "SourceSansProSemiboldItalic";
+  --font-weight-base-Black: "SourceSansProBlack";
+  --font-weight-base-Bold: "SourceSansProBold";
+  --font-weight-base-Semibold: "SourceSansProSemibold";
+  --font-weight-base-Light: "SourceSansProLight";
+  --font-weight-base-ExtraLight: "SourceSansProExtraLight";
+  */
