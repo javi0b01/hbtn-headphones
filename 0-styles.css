@@ -162,48 +162,24 @@ template {
   src: url(./fonts/SourceSansPro-Black.otf);
 }
 @font-face {
-  font-family: "SourceSansProBlackItalic";
-  src: url(./fonts/SourceSansPro-BlackIt.otf);
-}
-@font-face {
   font-family: "SourceSansProBold";
   src: url(./fonts/SourceSansPro-Bold.otf);
-}
-@font-face {
-  font-family: "SourceSansProBoldItalic";
-  src: url(./fonts/SourceSansPro-BoldIt.otf);
-}
-@font-face {
-  font-family: "SourceSansProExtraLight";
-  src: url(./fonts/SourceSansPro-ExtraLight.otf);
-}
-@font-face {
-  font-family: "SourceSansProExtraLightItalic";
-  src: url(./fonts/SourceSansPro-ExtraLightIt.otf);
-}
-@font-face {
-  font-family: "SourceSansProItalic";
-  src: url(./fonts/SourceSansPro-It.otf);
-}
-@font-face {
-  font-family: "SourceSansProLight";
-  src: url(./fonts/SourceSansPro-Light.otf);
-}
-@font-face {
-  font-family: "SourceSansProLightItalic";
-  src: url(./fonts/SourceSansPro-LightIt.otf);
-}
-@font-face {
-  font-family: "SourceSansPro";
-  src: url(./fonts/SourceSansPro-Regular.otf);
 }
 @font-face {
   font-family: "SourceSansProSemibold";
   src: url(./fonts/SourceSansPro-Semibold.otf);
 }
 @font-face {
-  font-family: "SourceSansProSemiboldItalic";
-  src: url(./fonts/SourceSansPro-SemiboldIt.otf);
+  font-family: "SourceSansProRegular";
+  src: url(./fonts/SourceSansPro-Regular.otf);
+}
+@font-face {
+  font-family: "SourceSansProLight";
+  src: url(./fonts/SourceSansPro-Light.otf);
+}
+@font-face {
+  font-family: "SourceSansProExtraLight";
+  src: url(./fonts/SourceSansPro-ExtraLight.otf);
 }
 @font-face {
   font-family: "SpinCycle";
@@ -213,6 +189,30 @@ template {
   font-family: "SpinCycle3D";
   src: url(./fonts/spincycle_3d_ot.otf);
 }
+@font-face {
+  font-family: "SourceSansProBlackItalic";
+  src: url(./fonts/SourceSansPro-BlackIt.otf);
+}
+@font-face {
+  font-family: "SourceSansProBoldItalic";
+  src: url(./fonts/SourceSansPro-BoldIt.otf);
+}
+@font-face {
+  font-family: "SourceSansProSemiboldItalic";
+  src: url(./fonts/SourceSansPro-SemiboldIt.otf);
+}
+@font-face {
+  font-family: "SourceSansProItalic";
+  src: url(./fonts/SourceSansPro-It.otf);
+}
+@font-face {
+  font-family: "SourceSansProLightItalic";
+  src: url(./fonts/SourceSansPro-LightIt.otf);
+}
+@font-face {
+  font-family: "SourceSansProExtraLightItalic";
+  src: url(./fonts/SourceSansPro-ExtraLightIt.otf);
+}
 /* VARIABLES */
 :root {
   --color-primary: #ff6565;
@@ -220,20 +220,20 @@ template {
   --color-black: #000000;
   --text-color-light: var(--color-white);
   --text-color-dark: var(--color-black);
-  --font-family-base: "SourceSansPro", Verdana, Helvetica, sans-serif;
+  --font-family-base-Black: "SourceSansProBlack";
+  --font-family-base-Bold: "SourceSansProBold";
+  --font-family-base-Semibold: "SourceSansProSemibold";
+  --font-family-base-Regular: "SourceSansProRegular", sans-serif;
+  --font-family-base-Light: "SourceSansProLight";
+  --font-family-base-ExtraLight: "SourceSansProExtraLight";
   --font-family-secondary: "SpinCycle";
+  --font-style-secondary-3d: "SpinCycle3D";
   --font-style-base-BlackItalic: "SourceSansProBlackItalic";
   --font-style-base-BoldItalic: "SourceSansProBoldItalic";
   --font-style-base-ExtraLightItalic: "SourceSansProExtraLightItalic";
   --font-style-base-Italic: "SourceSansProItalic";
   --font-style-base-LightItalic: "SourceSansProLightItalic";
   --font-style-base-SemiboldItalic: "SourceSansProSemiboldItalic";
-  --font-style-secondary-3d: "SpinCycle3D";
-  --font-weight-base-Black: "SourceSansProBlack";
-  --font-weight-base-Bold: "SourceSansProBold";
-  --font-weight-base-Semibold: "SourceSansProSemibold";
-  --font-weight-base-Light: "SourceSansProLight";
-  --font-weight-base-ExtraLight: "SourceSansProExtraLight";
   --font-size-xx-small: 1rem;
   --font-size-x-small: 1.2rem;
   --font-size-small: 1.4rem;
@@ -293,6 +293,21 @@ img {
 .container {
   max-width: 1140px;
 }
+@media (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 360px;
+  }
+}
 /* HEADER HERO
   ============================= */
 .navbar {
@@ -313,8 +328,7 @@ img {
   justify-content: space-between;
 }
 .menu-item {
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-base-Light);
+  font-family: var(--font-family-base-Regular);
   font-size: var(--font-size-x-small);
 }
 .hero-image {
@@ -331,16 +345,14 @@ img {
   text-align: center;
 }
 .hero-title {
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-base-Black);
+  font-family: var(--font-family-base-Bold);
   font-size: var(--font-size-xx-large);
   letter-spacing: 0.1rem;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 .hero-subtitle {
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-base-Bold);
+  font-family: var(--font-family-base-Semibold);
   font-size: var(--font-size-regular);
   letter-spacing: 0.05rem;
   margin-top: 0;
@@ -354,24 +366,18 @@ img {
   color: var(--text-color-light);
   border-radius: 44px;
   border: none;
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base-Regular);
   font-size: var(--font-size-small);
 }
 .hero-paragraph {
-  font-family: var(--font-family-base);
-  font-weight: var(--font-weight-base-ExtraLight);
+  font-family: var(--font-family-base-Light);
   font-size: var(--font-size-regular);
   line-height: var(--line-height-medium);
 }
-/*
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
+@media (max-width: 768px) {
+  .navbar {
+    width: 600px;
   }
 }
-@media (min-width: 1024px) {
-  .container {
-    max-width: 960px;
-  }
+@media (max-width: 375px) {
 }
-  */
