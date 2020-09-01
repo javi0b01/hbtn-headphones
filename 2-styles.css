@@ -1,0 +1,623 @@
+/* SUMMARY
+0. Reset / Normalize
+1. GLOBAL
+  FONTS
+  VARIABLES
+  BASE
+  COMMON
+2. HEADER
+  MENU
+  HERO
+3. MAIN
+  WHAT WE DO
+  OUR RESULTS
+4. ASIDE
+5. FOOTER
+*/
+/* 0.  Reset / Normalize
+  ============================= */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+input {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+  -webkit-appearance: button;
+}
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+progress {
+  vertical-align: baseline;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+details {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+template {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+/* 1.  GLOBAL
+  ============================= */
+/* FONTS */
+@font-face {
+  font-family: "SourceSansProBlack";
+  src: url(./fonts/SourceSansPro-Black.otf);
+}
+@font-face {
+  font-family: "SourceSansProBold";
+  src: url(./fonts/SourceSansPro-Bold.otf);
+}
+@font-face {
+  font-family: "SourceSansProSemibold";
+  src: url(./fonts/SourceSansPro-Semibold.otf);
+}
+@font-face {
+  font-family: "SourceSansProRegular";
+  src: url(./fonts/SourceSansPro-Regular.otf);
+}
+@font-face {
+  font-family: "SourceSansProLight";
+  src: url(./fonts/SourceSansPro-Light.otf);
+}
+@font-face {
+  font-family: "SourceSansProExtraLight";
+  src: url(./fonts/SourceSansPro-ExtraLight.otf);
+}
+@font-face {
+  font-family: "SpinCycle";
+  src: url(./fonts/spincycle_ot.otf);
+}
+@font-face {
+  font-family: "SpinCycle3D";
+  src: url(./fonts/spincycle_3d_ot.otf);
+}
+@font-face {
+  font-family: "SourceSansProBlackItalic";
+  src: url(./fonts/SourceSansPro-BlackIt.otf);
+}
+@font-face {
+  font-family: "SourceSansProBoldItalic";
+  src: url(./fonts/SourceSansPro-BoldIt.otf);
+}
+@font-face {
+  font-family: "SourceSansProSemiboldItalic";
+  src: url(./fonts/SourceSansPro-SemiboldIt.otf);
+}
+@font-face {
+  font-family: "SourceSansProItalic";
+  src: url(./fonts/SourceSansPro-It.otf);
+}
+@font-face {
+  font-family: "SourceSansProLightItalic";
+  src: url(./fonts/SourceSansPro-LightIt.otf);
+}
+@font-face {
+  font-family: "SourceSansProExtraLightItalic";
+  src: url(./fonts/SourceSansPro-ExtraLightIt.otf);
+}
+/* VARIABLES */
+:root {
+  --color-primary: #ff6565;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --text-color-light: var(--color-white);
+  --text-color-dark: var(--color-black);
+  --font-family-base-Black: "SourceSansProBlack";
+  --font-family-base-Bold: "SourceSansProBold";
+  --font-family-base-Semibold: "SourceSansProSemibold";
+  --font-family-base-Regular: "SourceSansProRegular", sans-serif;
+  --font-family-base-Light: "SourceSansProLight";
+  --font-family-base-ExtraLight: "SourceSansProExtraLight";
+  --font-family-secondary: "SpinCycle";
+  --font-style-secondary-3d: "SpinCycle3D";
+  --font-style-base-BlackItalic: "SourceSansProBlackItalic";
+  --font-style-base-BoldItalic: "SourceSansProBoldItalic";
+  --font-style-base-ExtraLightItalic: "SourceSansProExtraLightItalic";
+  --font-style-base-Italic: "SourceSansProItalic";
+  --font-style-base-LightItalic: "SourceSansProLightItalic";
+  --font-style-base-SemiboldItalic: "SourceSansProSemiboldItalic";
+  --font-size-xx-small: 1rem;
+  --font-size-x-small: 1.2rem;
+  --font-size-small: 1.4rem;
+  --font-size-regular: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-x-large: 2.4rem;
+  --font-size-xx-large: 3.2rem;
+  --font-size-xxx-large: 4.8rem;
+  --font-weight-thin: 100;
+  --font-weight-extraLight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semiBold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extraBold: 800;
+  --font-weight-black: 900;
+  --line-height-small: 1.2;
+  --line-height-medium: 1.5;
+  --line-height-big: 1.8;
+}
+/* BASE */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+a {
+  color: var(--text-color-light);
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  font-style: italic;
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+a:active {
+  text-decoration: underline;
+}
+img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 57.5%;
+  }
+}
+/* COMMON */
+.d-none {
+  display: none;
+}
+/* 2. HEADER
+  ============================= */
+/* MENU */
+.navbar {
+  width: 1000px;
+  height: 32px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  width: 160px;
+}
+.menu-open,
+.menu-open-button {
+  display: none;
+}
+.menu-list {
+  width: 300px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-item {
+  font-family: var(--font-family-base-Regular);
+  font-size: var(--font-size-x-small);
+}
+/* HERO */
+.hero-image {
+  height: 800px;
+  background-image: url(./images/headphones_hero_1.jpg);
+  background-position: center;
+  padding-top: 2rem;
+}
+.hero-content {
+  margin: 300px auto 0;
+  width: 637px;
+  height: 313px;
+  color: var(--text-color-light);
+  text-align: center;
+}
+.hero-title {
+  font-family: var(--font-family-base-Bold);
+  font-size: var(--font-size-xx-large);
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.hero-subtitle {
+  font-family: var(--font-family-base-Semibold);
+  font-size: var(--font-size-regular);
+  letter-spacing: 0.05rem;
+  text-align: center;
+  margin-top: 0;
+}
+.hero-btn {
+  width: 162px;
+  height: 44px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  background-color: var(--color-primary);
+  color: var(--text-color-light);
+  border-radius: 44px;
+  border: none;
+  font-family: var(--font-family-base-Regular);
+  font-size: var(--font-size-small);
+}
+.hero-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.hero-content p {
+  font-family: var(--font-family-base-Light);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height-medium);
+}
+@media (max-width: 768px) {
+  /* MENU */
+  .navbar {
+    width: 633px;
+  }
+}
+@media (max-width: 375px) {
+  /* MENU */
+  .navbar {
+    width: 100%;
+    margin-top: 8rem;
+    display: block;
+    position: relative;
+  }
+  .brand {
+    margin: 1rem auto;
+  }
+  .menu-line {
+    width: 2rem;
+    height: 2px;
+    background-color: var(--color-white);
+    border-radius: 2px;
+    position: absolute;
+    transition: all 0.1s ease-in-out;
+  }
+  .menu-line-1 {
+    transform: translate3d(0, -0.7rem, 0);
+  }
+  .menu-line-2 {
+    width: 1.2rem;
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-line-3 {
+    transform: translate3d(0, 0.7rem, 0);
+  }
+  .menu-list {
+    display: none;
+  }
+  .menu-open {
+    display: none;
+  }
+  .menu-open-button {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    left: 4rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .menu-open:checked + .menu-open-button .menu-line-1 {
+    transform: rotate(45deg) translate3d(0, 0, 0);
+  }
+  .menu-open:checked + .menu-open-button .menu-line-2 {
+    transform: scale(0) translate3d(0, 0, 0);
+  }
+  .menu-open:checked + .menu-open-button .menu-line-3 {
+    transform: rotate(-45deg) translate3d(0, 0, 0);
+  }
+  .menu-open:checked ~ .menu-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-open:checked ~ .menu-list .menu-item {
+    padding: 2rem 13rem;
+  }
+  /* HERO */
+  .hero-image {
+    background-position: -360px;
+    background-position-y: 2rem;
+    transform: scale(1.2, 1.2);
+  }
+  .hero-content {
+    width: 100%;
+    margin: 24rem auto 0;
+  }
+  .hero-title {
+    letter-spacing: normal;
+    padding: 0 4rem;
+  }
+  .hero-subtitle {
+    padding: 0 6rem;
+  }
+  .hero-btn {
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+  .hero-content p {
+    padding: 0 4rem;
+  }
+}
+/* 3. MAIN
+  ============================= */
+/* WHAT WE DO */
+.what-we-do {
+  text-align: center;
+}
+.wwd-content {
+  width: 637px;
+  margin: auto;
+}
+.wwd-title {
+  font-family: var(--font-family-base-Bold);
+  font-size: var(--font-size-xx-large);
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-top: 12rem;
+  margin-bottom: 4rem;
+}
+.wwd-subtitle {
+  font-family: var(--font-family-base-Semibold);
+  font-size: var(--font-size-regular);
+  letter-spacing: 0.05rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+.wwd-content p {
+  font-family: var(--font-family-base-Regular);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height-big);
+}
+.wwd-cards {
+  width: 1002px;
+  height: 193px;
+  margin: 10rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+.wwd-card {
+  width: 207px;
+  height: 180px;
+}
+.wwd-card .hbtn-icon {
+  font-size: 94px;
+  color: var(--color-primary);
+}
+.wwd-card p {
+  font-family: var(--font-family-base-Light);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height-medium);
+}
+@media (max-width: 768px) {
+  .wwd-cards {
+    width: 472px;
+    flex-wrap: wrap;
+  }
+  .wwd-card {
+    margin-bottom: 8rem;
+  }
+}
+@media (max-width: 375px) {
+  .wwd-content {
+    width: 100%;
+    padding: 4rem;
+  }
+  .wwd-cards {
+    width: 100%;
+    margin-top: 4rem;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .wwd-card {
+    width: 100%;
+  }
+  .wwd-card p {
+    width: 50%;
+    margin: auto;
+  }
+}
+/* OUR RESULTS */
+.our-results {
+  height: 650px;
+  background-image: url(./images/headphones_hero_2.jpg);
+  background-position: center;
+  color: var(--text-color-light);
+  padding-top: 11rem;
+  text-align: center;
+}
+.or-content {
+  width: 637px;
+  height: 184px;
+  margin: auto;
+}
+.or-title {
+  font-family: var(--font-family-base-Regular);
+  font-size: var(--font-size-xx-large);
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.or-content p {
+  font-family: var(--font-family-base-Light);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height-big);
+  letter-spacing: 0.05rem;
+}
+.or-cards {
+  width: 1002px;
+  height: 193px;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+.or-card {
+  width: 190px;
+  position: relative;
+}
+.pentagon {
+  display: block;
+  margin: 0;
+  background-color: var(--color-primary);
+  width: 100%;
+  padding-bottom: 95%;
+  clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 20% 100%, 0% 40%);
+}
+.or-card .percentage {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family-base-Bold);
+  font-size: var(--font-size-xxx-large);
+}
+.or-card .result {
+  width: 110px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family-base-ExtraLight);
+  font-size: var(--font-size-small);
+}
+/* 4. ASIDE
+  ============================= */
+/* 5. FOOTER
+  ============================= */
