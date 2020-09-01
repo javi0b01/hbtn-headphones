@@ -274,11 +274,6 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%;
 }
-p {
-  font-family: var(--font-family-base-Light);
-  font-size: var(--font-size-regular);
-  line-height: var(--line-height-medium);
-}
 a {
   color: var(--text-color-light);
 }
@@ -312,26 +307,9 @@ img {
 .d-none {
   display: none;
 }
-.title {
-  font-family: var(--font-family-base-Bold);
-  font-size: var(--font-size-xx-large);
-  letter-spacing: 0.1rem;
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-.subtitle {
-  font-family: var(--font-family-base-Semibold);
-  font-size: var(--font-size-regular);
-  letter-spacing: 0.05rem;
-  text-align: center;
-  margin-top: 0;
-}
-.text-center {
-  text-align: center;
-}
 /* 2. HEADER
   ============================= */
+/* MENU */
 .navbar {
   width: 1000px;
   height: 32px;
@@ -357,6 +335,7 @@ img {
   font-family: var(--font-family-base-Regular);
   font-size: var(--font-size-x-small);
 }
+/* HERO */
 .hero-image {
   height: 800px;
   background-image: url(./images/headphones_hero_1.jpg);
@@ -369,6 +348,21 @@ img {
   height: 313px;
   color: var(--text-color-light);
   text-align: center;
+}
+.hero-title {
+  font-family: var(--font-family-base-Bold);
+  font-size: var(--font-size-xx-large);
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.hero-subtitle {
+  font-family: var(--font-family-base-Semibold);
+  font-size: var(--font-size-regular);
+  letter-spacing: 0.05rem;
+  text-align: center;
+  margin-top: 0;
 }
 .hero-btn {
   width: 162px;
@@ -386,12 +380,19 @@ img {
   cursor: pointer;
   opacity: 0.8;
 }
+.hero-content p {
+  font-family: var(--font-family-base-Light);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height-medium);
+}
 @media (max-width: 768px) {
+  /* MENU */
   .navbar {
-    width: 600px;
+    width: 633px;
   }
 }
 @media (max-width: 375px) {
+  /* MENU */
   .navbar {
     width: 100%;
     margin-top: 8rem;
@@ -450,6 +451,7 @@ img {
   .menu-open:checked ~ .menu-list .menu-item {
     padding: 2rem 13rem;
   }
+  /* HERO */
   .hero-image {
     background-position: -360px;
     background-position-y: 2rem;
@@ -457,7 +459,7 @@ img {
   }
   .hero-content {
     width: 100%;
-    margin-top: 24rem;
+    margin: 24rem auto 0;
   }
   .hero-title {
     letter-spacing: normal;
@@ -470,25 +472,38 @@ img {
     margin-top: 0;
     margin-bottom: 4rem;
   }
-  .hero-paragraph {
+  .hero-content p {
     padding: 0 4rem;
   }
 }
-/* 3. WHAT WE DO
+/* 3. MAIN
   ============================= */
+/* WHAT WE DO */
 .what-we-do {
   text-align: center;
 }
 .wwd-content {
   width: 637px;
-  height: 184px;
   margin: auto;
 }
-.wwd-content .title {
-  margin-top: 11rem;
+.wwd-title {
+  font-family: var(--font-family-base-Bold);
+  font-size: var(--font-size-xx-large);
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-top: 12rem;
   margin-bottom: 4rem;
 }
+.wwd-subtitle {
+  font-family: var(--font-family-base-Semibold);
+  font-size: var(--font-size-regular);
+  letter-spacing: 0.05rem;
+  text-align: center;
+  margin: 2rem 0;
+}
 .wwd-content p {
+  font-family: var(--font-family-base-Regular);
+  font-size: var(--font-size-regular);
   line-height: var(--line-height-big);
 }
 .wwd-cards {
@@ -502,67 +517,45 @@ img {
   width: 207px;
   height: 180px;
 }
-.wwd-card .subtitle {
-  margin: 2rem 0;
-}
 .wwd-card .hbtn-icon {
   font-size: 94px;
   color: var(--color-primary);
 }
-/* 4. OUR RESULTS
-  ============================= */
-.our-results {
-  height: 650px;
-  background-image: url(./images/headphones_hero_2.jpg);
-  background-position: center;
-  color: var(--text-color-light);
-  padding-top: 14rem;
-}
-.or-content {
-  width: 637px;
-  height: 184px;
-  margin: auto;
-}
-.or-content .title {
-  margin-bottom: 5rem;
-}
-.or-cards {
-  width: 1002px;
-  height: 193px;
-  margin: 5rem auto;
-  display: flex;
-  justify-content: space-between;
-}
-.or-card {
-  width: 190px;
-  position: relative;
-}
-.pentagon {
-  display: block;
-  margin: 0;
-  background-color: var(--color-primary);
-  width: 100%;
-  padding-bottom: 95%;
-  clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 20% 100%, 0% 40%);
-}
-.or-card .percentage {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-family-base-Bold);
-  font-size: var(--font-size-xxx-large);
-}
-.or-card .result {
-  width: 110px;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-family-base-ExtraLight);
-  font-size: var(--font-size-small);
+.wwd-card p {
+  font-family: var(--font-family-base-Light);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height-medium);
 }
 @media (max-width: 768px) {
+  .wwd-cards {
+    width: 472px;
+    flex-wrap: wrap;
+  }
+  .wwd-card {
+    margin-bottom: 8rem;
+  }
 }
 @media (max-width: 375px) {
+  .wwd-content {
+    width: 100%;
+    padding: 4rem;
+  }
+  .wwd-cards {
+    width: 100%;
+    margin-top: 4rem;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  .wwd-card {
+    width: 100%;
+  }
+  .wwd-card p {
+    width: 50%;
+    margin: auto;
+  }
 }
+/* OUR RESULTS */
+/* 4. ASIDE
+  ============================= */
+/* 5. FOOTER
+  ============================= */
