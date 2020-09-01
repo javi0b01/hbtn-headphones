@@ -5,8 +5,9 @@
   VARIABLES
   BASE
   COMMON
-2. HEADER HERO
+2. HEADER
 3. WHAT WE DO
+4. OUR RESULTS
 */
 /* 0.  Reset / Normalize
   ============================= */
@@ -244,6 +245,7 @@ template {
   --font-size-large: 1.8rem;
   --font-size-x-large: 2.4rem;
   --font-size-xx-large: 3.2rem;
+  --font-size-xxx-large: 4.8rem;
   --font-weight-thin: 100;
   --font-weight-extraLight: 200;
   --font-weight-light: 300;
@@ -267,6 +269,11 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%;
 }
+p {
+  font-family: var(--font-family-base-Light);
+  font-size: var(--font-size-regular);
+  line-height: var(--line-height-medium);
+}
 a {
   color: var(--text-color-light);
 }
@@ -286,22 +293,39 @@ a:active {
 img {
   width: 100%;
 }
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media (max-width: 375px) {
+  html {
+    font-size: 57.5%;
+  }
+}
 /* COMMON */
 .d-none {
   display: none;
 }
-.container-fluid {
-  width: 100%;
+.title {
+  font-family: var(--font-family-base-Bold);
+  font-size: var(--font-size-xx-large);
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
-.container {
-  max-width: 1140px;
+.subtitle {
+  font-family: var(--font-family-base-Semibold);
+  font-size: var(--font-size-regular);
+  letter-spacing: 0.05rem;
+  text-align: center;
+  margin-top: 0;
 }
-@media (max-width: 1024px) {
-  .container {
-    max-width: 960px;
-  }
+.text-center {
+  text-align: center;
 }
-/* 2. HEADER HERO
+/* 2. HEADER
   ============================= */
 .navbar {
   width: 1000px;
@@ -341,19 +365,6 @@ img {
   color: var(--text-color-light);
   text-align: center;
 }
-.hero-title {
-  font-family: var(--font-family-base-Bold);
-  font-size: var(--font-size-xx-large);
-  letter-spacing: 0.1rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-.hero-subtitle {
-  font-family: var(--font-family-base-Semibold);
-  font-size: var(--font-size-regular);
-  letter-spacing: 0.05rem;
-  margin-top: 0;
-}
 .hero-btn {
   width: 162px;
   height: 44px;
@@ -370,29 +381,12 @@ img {
   cursor: pointer;
   opacity: 0.8;
 }
-.hero-paragraph {
-  font-family: var(--font-family-base-Light);
-  font-size: var(--font-size-regular);
-  line-height: var(--line-height-medium);
-}
 @media (max-width: 768px) {
-  html {
-    font-size: 60%;
-  }
-  .container {
-    max-width: 720px;
-  }
   .navbar {
     width: 600px;
   }
 }
 @media (max-width: 375px) {
-  html {
-    font-size: 57.5%;
-  }
-  .container {
-    max-width: 360px;
-  }
   .navbar {
     width: 100%;
     margin-top: 8rem;
@@ -477,3 +471,88 @@ img {
 }
 /* 3. WHAT WE DO
   ============================= */
+.what-we-do {
+  text-align: center;
+}
+.wwd-content {
+  width: 637px;
+  height: 184px;
+  margin: auto;
+}
+.wwd-content .title {
+  margin-top: 11rem;
+  margin-bottom: 4rem;
+}
+.wwd-content p {
+  line-height: var(--line-height-big);
+}
+.wwd-cards {
+  width: 1002px;
+  height: 193px;
+  margin: 10rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+.wwd-card {
+  width: 207px;
+  height: 180px;
+}
+.wwd-card .subtitle {
+  margin: 2rem 0;
+}
+.wwd-card .hbtn-icon {
+  font-size: 94px;
+  color: var(--color-primary);
+}
+/* 4. OUR RESULTS
+  ============================= */
+.our-results {
+  height: 650px;
+  background-image: url(./images/headphones_hero_2.jpg);
+  background-position: center;
+  color: var(--text-color-light);
+  padding-top: 11rem;
+}
+.or-content {
+  width: 637px;
+  height: 184px;
+  margin: auto;
+}
+.or-cards {
+  width: 1002px;
+  height: 193px;
+  margin: 10rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+.or-card {
+  width: 190px;
+  position: relative;
+}
+.or-card div {
+  background-color: var(--color-primary);
+  width: 100%;
+  padding-bottom: 95%;
+  clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 20% 100%, 0% 40%);
+}
+.or-card strong {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family-base-Bold);
+  font-size: var(--font-size-xxx-large);
+}
+.or-card small {
+  width: 110px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family-base-ExtraLight);
+  font-size: var(--font-size-small);
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 375px) {
+}
