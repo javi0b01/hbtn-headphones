@@ -17,19 +17,20 @@ Here the final result:
   - [Figma](https://www.figma.com/)
 * [SOURCE SANS PRO](https://www.fontsquirrel.com/fonts/source-sans-pro)
 * [SPIN CYCLE](https://www.fontsquirrel.com/fonts/Spin-Cycle-OT)
+* [holberton_school-icon](https://intranet.hbtn.io/rltoken/UTLmru8XUpDXW2EbLdLyew)
 
 ## Requirements
-- A `README.md` file.
-- you are not allowed to import external CSS framework (like Bootstrap)
-- you are not to use Javascript
+* A `README.md` file.
+* you are not allowed to import external CSS framework (like Bootstrap)
+* you are not to use Javascript
 
 ## Tasks
-- [ ] 0. Read and be familiar with Figma
-- [ ] 1. Header
-- [ ] 2. "What we do..." section
-- [ ] 3. "Our results" section
-- [ ] 4. Contact us
-- [ ] 5. Footer
+- [x] 0. Read and be familiar with Figma
+- [x] 1. Header
+- [x] 2. "What we do..." section
+- [x] 3. "Our results" section
+- [x] 4. Contact us
+- [x] 5. Footer
 * [ ] 6. Replace image by... code!
 * [ ] 7. Let's animate items
 * [ ] 8. And SASS??
