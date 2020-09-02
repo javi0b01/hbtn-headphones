@@ -226,7 +226,7 @@ template {
 :root {
   --color-primary: #ff6565;
   --color-white: #ffffff;
-  --color-black: #000000;
+  --color-black: #081632;
   --text-color-light: var(--color-white);
   --text-color-dark: var(--color-black);
   --font-family-base-Black: "SourceSansProBlack";
@@ -309,6 +309,21 @@ img {
 }
 /* 2. HEADER
   ============================= */
+.header {
+  width: 100%;
+  background-color: var(--color-black);
+  text-align: center;
+}
+/* HERO */
+.hero-image {
+  height: 800px;
+  background-image: url(./images/headphones_hero_1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 2rem;
+}
 /* MENU */
 .navbar {
   width: 1000px;
@@ -316,14 +331,13 @@ img {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-.brand {
-  width: 160px;
 }
 .menu-open,
 .menu-open-button {
   display: none;
+}
+.brand {
+  width: 160px;
 }
 .menu-list {
   width: 300px;
@@ -336,27 +350,16 @@ img {
   font-size: var(--font-size-x-small);
 }
 /* HERO */
-.hero-image {
-  height: 800px;
-  background-image: url(./images/headphones_hero_1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  padding-top: 2rem;
-}
 .hero-content {
   margin: 300px auto 0;
   width: 637px;
   height: 313px;
   color: var(--text-color-light);
-  text-align: center;
 }
 .hero-title {
   font-family: var(--font-family-base-Bold);
   font-size: var(--font-size-xx-large);
   letter-spacing: 0.1rem;
-  text-align: center;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -364,7 +367,6 @@ img {
   font-family: var(--font-family-base-Semibold);
   font-size: var(--font-size-regular);
   letter-spacing: 0.05rem;
-  text-align: center;
   margin-top: 0;
 }
 .hero-btn {
@@ -402,9 +404,6 @@ img {
     display: block;
     position: relative;
   }
-  .brand {
-    margin: 1rem auto;
-  }
   .menu-line {
     width: 2rem;
     height: 2px;
@@ -422,6 +421,9 @@ img {
   }
   .menu-line-3 {
     transform: translate3d(0, 0.7rem, 0);
+  }
+  .brand {
+    margin: 1rem auto;
   }
   .menu-list {
     display: none;
@@ -479,11 +481,17 @@ img {
     padding: 0 4rem;
   }
 }
+
 /* 3. MAIN
   ============================= */
+.main {
+  width: 100%;
+  text-align: center;
+}
 /* WHAT WE DO */
 .what-we-do {
-  text-align: center;
+  background-color: var(--color-white);
+  color: var(--text-color-dark);
 }
 .wwd-content {
   width: 637px;
@@ -493,7 +501,6 @@ img {
   font-family: var(--font-family-base-Bold);
   font-size: var(--font-size-xx-large);
   letter-spacing: 0.1rem;
-  text-align: center;
   margin-top: 12rem;
   margin-bottom: 4rem;
 }
@@ -501,7 +508,6 @@ img {
   font-family: var(--font-family-base-Semibold);
   font-size: var(--font-size-regular);
   letter-spacing: 0.05rem;
-  text-align: center;
   margin: 2rem 0;
 }
 .wwd-content p {
@@ -558,15 +564,18 @@ img {
 }
 /* OUR RESULTS */
 .our-results {
+  background-color: var(--color-black);
+  color: var(--text-color-light);
+  text-align: center;
+}
+.or-image {
   height: 650px;
   background-image: url(./images/headphones_hero_2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  color: var(--text-color-light);
   padding-top: 11rem;
-  text-align: center;
+  position: relative;
 }
 .or-content {
   width: 637px;
@@ -577,7 +586,6 @@ img {
   font-family: var(--font-family-base-Regular);
   font-size: var(--font-size-xx-large);
   letter-spacing: 0.1rem;
-  text-align: center;
   margin-bottom: 5rem;
 }
 .or-content p {
@@ -625,12 +633,14 @@ img {
 @media (max-width: 768px) {
   .our-results {
     height: 876px;
-    background-position: -370px;
-    background-position-y: -7rem;
-    padding-top: 14rem;
+  }
+  .or-image {
+    background-position: -280px;
+    background-position-y: -5rem;
+    padding-top: 8rem;
   }
   .or-title {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .or-content p {
     line-height: var(--line-height-medium);
@@ -646,9 +656,12 @@ img {
 }
 @media (max-width: 375px) {
   .our-results {
-    background-position: -580px;
-    background-position-y: -9rem;
-    padding-top: 13rem;
+    height: 1471px;
+  }
+  .or-image {
+    background-position: -420px;
+    background-position-y: -7rem;
+    padding-top: 6rem;
   }
   .or-content {
     width: 100%;
@@ -675,5 +688,15 @@ img {
 }
 /* 4. ASIDE
   ============================= */
+.aside {
+  width: 100%;
+  background-color: var(--color-white);
+  text-align: center;
+}
 /* 5. FOOTER
   ============================= */
+.footer {
+  width: 100%;
+  background-color: var(--color-black);
+  text-align: center;
+}
