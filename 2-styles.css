@@ -340,6 +340,9 @@ img {
   height: 800px;
   background-image: url(./images/headphones_hero_1.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   padding-top: 2rem;
 }
 .hero-content {
@@ -508,7 +511,6 @@ img {
 }
 .wwd-cards {
   width: 1002px;
-  height: 193px;
   margin: 10rem auto;
   display: flex;
   justify-content: space-between;
@@ -559,6 +561,9 @@ img {
   height: 650px;
   background-image: url(./images/headphones_hero_2.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   color: var(--text-color-light);
   padding-top: 11rem;
   text-align: center;
@@ -616,6 +621,57 @@ img {
   transform: translate(-50%, -50%);
   font-family: var(--font-family-base-ExtraLight);
   font-size: var(--font-size-small);
+}
+@media (max-width: 768px) {
+  .our-results {
+    height: 876px;
+    background-position: -370px;
+    background-position-y: -7rem;
+    padding-top: 14rem;
+  }
+  .or-title {
+    margin-bottom: 3rem;
+  }
+  .or-content p {
+    line-height: var(--line-height-medium);
+  }
+  .or-cards {
+    width: 500px;
+    margin: 3rem auto;
+    flex-wrap: wrap;
+  }
+  .or-card {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 375px) {
+  .our-results {
+    background-position: -580px;
+    background-position-y: -9rem;
+    padding-top: 13rem;
+  }
+  .or-content {
+    width: 100%;
+    height: auto;
+  }
+  .or-title {
+    margin-bottom: 5rem;
+    padding: 0 6rem;
+    line-height: var(--line-height-medium);
+  }
+  .or-content p {
+    padding: 0 4rem;
+    letter-spacing: 0.06rem;
+  }
+  .or-cards {
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .or-card {
+    margin-bottom: 4rem;
+  }
 }
 /* 4. ASIDE
   ============================= */
