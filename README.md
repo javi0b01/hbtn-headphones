@@ -1,7 +1,6 @@
 # 0x09. Implement a design from scratch
 :open_file_folder: Specializations - Web Stack programming ― Front-end  
 :bust_in_silhouette: by Nicolas Philippot, UI/UX designer and Guillaume Salva, CTO at Holberton School  
-:copyright: **[Holberton School](https://www.holbertonschool.com/)**
 
 ## General
 In this project, you will implement from scratch, without any library, a web page. You will use all HTML/CSS/Accessibility/Responsive design knowledges that you learned previously.
@@ -35,6 +34,6 @@ Here the final result:
 * [ ] 7. Let's animate items
 * [ ] 8. And SASS??
 
-## Software engineer
-Javier Andrés Garzón Patarroyo  
-:octocat: [GitHub](https://github.com/javierandresgp/)
+## Software Developer
+Built by [javi](https://github.com/javi0x00) :copyright: 2020  
+Found a bug or have an idea? [Contact me](https://www.linkedin.com/in/javi0x00/).
